@@ -27,8 +27,11 @@ jobs:
 #         env:
 #           NODE_ENV: production
       - name: Deploy
-        run: gh-pages -d build
-#         uses: peaceiris/actions-gh-pages@v2.5.0
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: a25e567c907d4db0fcccac3a63a411338b45dea9
+          publish_branch: master
+          publish_dir: ./public
 #         env:
 #           PERSONAL_TOKEN: a25e567c907d4db0fcccac3a63a411338b45dea9
 #           PUBLISH_BRANCH: master
